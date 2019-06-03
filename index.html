@@ -1,0 +1,47 @@
+<html>
+	<head></head>
+	<body>
+		<div class="doors">
+			<img src="door.png" class="door1">
+			<img src="door2.png">
+			<img src="door3.png">
+		</div>
+		<div style="background-image: url(bg.jpg); height: 800px; background-repeat: no-repeat; background-size: 100% 100%; display: none;"class="bg">
+			<h1 style="color: white;"> Помоги Гарри найти его метлу, плащ и калаш! Надо заработать 3 очка!</h1>
+			<h1 style="color: white;" class="tab">0</h1>
+			<button style="color: white; background-color: green;" class="exit">Выйти из игры</button>
+			<img src="gun.png" style="height: 75px; position:absolute; margin-top: 450px; margin-left: 25px;" class="gun">
+			<img src="mantiya.png" style="height: 150px; position:absolute; margin-left: 540px; margin-top: 480px;" class="mnt">
+			<img src="metla.png" style="height: 125px; position:absolute; margin-left: 525px;" class="mtl">
+			<img src="palochka.png" style="height: 100px; position:absolute; margin-left: 1250px; margin-top: 575px;">
+			<img src="ring.png" style="height: 25px; position:absolute; margin-top: 450px; margin-left: 775px;">
+		</div>
+		<script type="text/javascript">
+			let score = 0
+			document.querySelector(".door1").onclick = function(){
+				alert("Добро пожаловать в Хогвартс!");
+				document.querySelector(".bg").style.display = "block";
+				document.querySelector(".doors").style.display = "none";
+			}
+			document.querySelector(".gun").onclick = function(){
+				document.querySelector(".gun").style.display = "none";
+				score = score + 1;
+				document.querySelector(".tab").innerHTML = score;
+			}
+			document.querySelector(".mnt").onclick = function(){
+				document.querySelector(".mnt").style.display = "none";
+				score = score + 1;
+				document.querySelector(".tab").innerHTML = score;
+			}
+			document.querySelector(".mtl").onclick = function(){
+				document.querySelector(".mtl").style.display = "none";
+				score = score + 1;
+				document.querySelector(".tab").innerHTML = score;
+			}
+			document.querySelector(".exit").onclick = function(){
+				document.querySelector(".bg").style.display = "none";
+				document.querySelector(".doors").style.display = "block";
+			}
+		</script>
+	</body>
+</html>
